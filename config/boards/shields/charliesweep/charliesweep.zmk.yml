@@ -1,0 +1,12 @@
+file_format: "1"
+id: charliesweep
+name: Sweep/charliesweep
+type: shield
+url: https://github.com/davidphilipbarr/Sweep
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+siblings:
+  - charliesweep_left
+  - charliesweep_right
