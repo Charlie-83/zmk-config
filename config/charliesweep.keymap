@@ -54,9 +54,9 @@
         num_layer {
             bindings = <
 
-&kp N1       &kp N2       &kp N3        &kp PLUS         &kp MINUS  &none      &none      &none     &none     &none
-&hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &hm LSHFT EQUAL  &kp PRCNT  &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI  &none
-&kp N7       &kp N8       &kp N9        &kp N0           &none      &none      &none      &kp LT    &kp GT    &none
+&kp N1       &kp N2       &kp N3        &kp PLUS         &kp MINUS  &none      &none      &none      &none     &none
+&hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &hm LSHFT EQUAL  &kp PRCNT  &none      &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI
+&kp N7       &kp N8       &kp N9        &kp N0           &none      &none      &none      &kp LT     &kp GT    &none
                                         &trans           &trans     &trans     &trans
 
             >;
@@ -77,7 +77,7 @@
             bindings = <
 
 &kp F1       &kp F2       &kp F3        &kp F12        &none    &kp INS   &kp PG_DN     &kp PG_UP       &kp DEL         &kp PSCRN
-&hm LGUI F4  &hm LALT F5  &hm LCTRL F6  &hm LSHFT F10  &kp F11  &kp LEFT  &hm RSHFT UP  &hm RCTRL DOWN  &hm LALT RIGHT  &kp SLCK
+&hm LGUI F4  &hm LALT F5  &hm LCTRL F6  &hm LSHFT F10  &kp F11  &kp LEFT  &hm RSHFT UP  &hm RCTRL DOWN  &hm LALT RIGHT  &hm LGUI SLCK
 &kp F7       &kp F8       &kp F9        &none          &none    &none     &kp HOME      &kp END         &kp SYSREQ      &kp PAUSE_BREAK
                                         &trans         &trans   &trans    &trans
 
