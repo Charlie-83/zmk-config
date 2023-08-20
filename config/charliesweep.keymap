@@ -66,7 +66,7 @@
             bindings = <
 
 &kp GRAVE    &kp DQT      &kp LBRC        &kp LPAR        &kp LBKT  &kp EXCL  &kp STAR        &kp AMPS        &none           &kp NUHS
-&hm LGUI AT  &hm LALT QT  &hm LCTRL RBRC  &hm LSHFT RPAR  &kp RBKT  &kp HASH  &hm RSHFT CARET &hm RCTRL DLLR  &hm LALT UNDER  &hm LGUI SEMI
+&hm LGUI AT  &hm LALT SQT  &hm LCTRL RBRC  &hm LSHFT RPAR  &kp RBKT  &kp HASH  &hm RSHFT CARET &hm RCTRL DLLR  &hm LALT UNDER  &hm LGUI SEMI
 &none        &none        &none           &kp TILDE       &none     &kp BSLH  &kp PIPE        &kp FSLH        &kp QMARK       &none
                                           &trans          &trans    &trans    &trans
 
