@@ -35,7 +35,7 @@
         , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // s
         , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // n
         , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // t
-        , <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // thumb key 2
+        , <&pro_micro  1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // thumb key 2
         , <&pro_micro  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // h 
 
         , <&pro_micro  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // z
@@ -44,7 +44,7 @@
         , <&pro_micro  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // m 
         , <&pro_micro  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // b
 
-        , <&pro_micro  1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // d
+        , <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // d
         , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // w
         ;
     };
