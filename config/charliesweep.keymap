@@ -19,13 +19,23 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
+        hml: homerow_mods_left  {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
             #binding-cells = <2>;
             tapping_term_ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32>;
+        };
+        hmr: homerow_mods_right  {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16>;
         };
     };
 
@@ -44,7 +54,7 @@
             bindings = <
 
 &kp Q      &kp W      &kp E       &kp R        &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P
-&hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F  &kp G          &kp H            &hm RSHFT J    &hm RCTRL K &hm LALT L &hm LGUI COLON
+&hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F  &kp G          &kp H            &hmr RSHFT J    &hmr RCTRL K &hmr LALT L &hmr LGUI COLON
 &kp Z      &kp X      &kp C       &kp V        &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp ESC
                                   &kp BSPC     &lt NUM_L TAB  &lt SYM_L ENTER  &kp SPACE
 
@@ -55,7 +65,7 @@
             bindings = <
 
 &kp N1       &kp N2       &kp N3        &kp PLUS         &kp MINUS  &none      &none      &none      &none     &none
-&hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &hm LSHFT EQUAL  &kp PRCNT  &none      &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI
+&hml LGUI N4  &hml LALT N5  &hml LCTRL N6  &hml LSHFT EQUAL  &kp PRCNT  &none      &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI
 &kp N7       &kp N8       &kp N9        &kp N0           &none      &none      &none      &kp LT     &kp GT    &none
                                         &trans           &trans     &trans     &trans
 
@@ -65,10 +75,10 @@
         sym_layer {
             bindings = <
 
-&kp GRAVE    &kp DQT      &kp LBRC        &kp LPAR        &kp LBKT  &kp EXCL  &kp STAR        &kp AMPS        &none           &kp NUHS
-&hm LGUI AT  &hm LALT SQT  &hm LCTRL RBRC  &hm LSHFT RPAR  &kp RBKT  &kp HASH  &hm RSHFT CARET &hm RCTRL DLLR  &hm LALT UNDER  &hm LGUI SEMI
-&none        &none        &none           &kp TILDE       &none     &kp BSLH  &kp PIPE        &kp FSLH        &kp QMARK       &none
-                                          &trans          &trans    &trans    &trans
+&kp GRAVE    &kp DQT       &kp LBRC        &kp LPAR        &kp LBKT  &kp EXCL  &kp STAR        &kp AMPS        &none           &kp NUHS
+&hml LGUI AT  &hml LALT SQT  &hml LCTRL RBRC  &hml LSHFT RPAR  &kp RBKT  &kp HASH  &hmr RSHFT CARET &hmr RCTRL DLLR  &hmr LALT UNDER  &hmr LGUI SEMI
+&none        &none         &none           &kp TILDE       &none     &kp BSLH  &kp PIPE        &kp FSLH        &kp QMARK       &none
+                                           &trans          &trans    &trans    &trans
 
             >;
         };
@@ -77,7 +87,7 @@
             bindings = <
 
 &kp F1       &kp F2       &kp F3        &kp F12        &none    &kp INS   &kp PG_DN     &kp PG_UP       &kp DEL         &kp PSCRN
-&hm LGUI F4  &hm LALT F5  &hm LCTRL F6  &hm LSHFT F10  &kp F11  &kp LEFT  &hm RSHFT UP  &hm RCTRL DOWN  &hm LALT RIGHT  &hm LGUI SLCK
+&hml LGUI F4  &hml LALT F5  &hml LCTRL F6  &hml LSHFT F10  &kp F11  &kp LEFT  &hmr RSHFT DOWN  &hmr RCTRL UP  &hmr LALT RIGHT  &hmr LGUI SLCK
 &kp F7       &kp F8       &kp F9        &none          &none    &none     &kp HOME      &kp END         &kp SYSREQ      &kp PAUSE_BREAK
                                         &trans         &trans   &trans    &trans
 
