@@ -72,7 +72,7 @@
 &kp N1       &kp N2       &kp N3        &kp PLUS         &kp MINUS  &none     &none      &none      &none     &none
 &hm LGUI N4  &hm LALT N5  &hm LCTRL N6  &hm LSHFT EQUAL  &kp PRCNT  &none     &kp RSHFT  &kp RCTRL  &kp LALT  &kp LGUI
 &kp N7       &kp N8       &kp N9        &kp N0           &none      &none     &none      &kp LT     &kp GT    &none
-                                        &none            &trans     &trans    &none
+                                        &trans           &trans     &trans    &trans
 
             >;
         };
@@ -83,7 +83,7 @@
 &kp GRAVE    &kp DQT       &kp LBRC        &kp LPAR        &kp LBKT  &kp EXCL  &kp STAR         &kp AMPS        &none           &kp NUHS
 &hm LGUI AT  &hm LALT SQT  &hm LCTRL RBRC  &hm LSHFT RPAR  &kp RBKT  &kp HASH  &hm RSHFT CARET  &hm RCTRL DLLR  &hm LALT UNDER  &hm LGUI SEMI
 &none        &none         &none           &kp TILDE       &none     &kp BSLH  &kp PIPE         &kp FSLH        &kp QMARK       &none
-                                           &none           &trans    &trans    &none
+                                           &trans          &trans    &trans    &trans
 
             >;
         };
