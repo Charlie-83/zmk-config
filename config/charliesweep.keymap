@@ -10,13 +10,12 @@
 #include <dt-bindings/zmk/outputs.h>
 
 
-#define NOMOD_L 1
-#define NUM_L 2
-#define SYM_L 3
-#define NAV_L 4
-#define BLE_L 5
-#define ASE_L 6
-#define ASE2_L 7
+#define NUM_L 1
+#define SYM_L 2
+#define NAV_L 3
+#define BLE_L 4
+#define LEFT_ONLY_L 5
+#define LEFT_ONLY_2_L 6
 
 &lt { quick_tap_ms = <200>; };
 
@@ -36,8 +35,18 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         nav_layer {
-            if-layers = <2 3>;
-            then-layer = <4>;
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_caps {
+            layers = <0>;
+            timeout-ms = <50>;
+            key-positions = <20 29>;
+            bindings = <&kp CAPS>;
         };
     };
 
@@ -49,19 +58,8 @@
 
 &kp Q          &kp W       &kp E        &kp R        &kp T          &kp Y            &kp U        &kp I        &kp O       &kp P
 &hm LGUI A     &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G          &kp H            &hm RSHFT J  &hm RCTRL K  &hm LALT L  &hm LGUI COLON
-&lt NOMOD_L Z  &kp X       &kp C        &kp V        &kp B          &kp N            &kp M        &kp COMMA    &kp DOT     &kp ESC
+&kp Z  &kp X       &kp C        &kp V        &kp B          &kp N            &kp M        &kp COMMA    &kp DOT     &kp ESC
                                         &kp SPACE    &lt NUM_L TAB  &lt SYM_L ENTER  &kp BSPC
-
-            >;
-        };
-
-        nomod_layer {
-            bindings = <
-
-&trans  &trans  &trans  &trans  &trans   &trans     &trans  &trans  &trans  &trans
-&kp A   &kp S   &kp D   &kp F   &trans   &trans     &kp J   &kp K   &kp L   &kp COLON
-&trans  &trans  &trans  &trans  &trans   &trans     &trans  &trans  &trans  &kp CAPS
-                        &trans  &kp TAB  &kp ENTER  &trans
 
             >;
         };
@@ -91,10 +89,10 @@
         nav_layer {
             bindings = <
 
-&kp F1       &kp F2       &kp F3        &kp F12        &none       &kp INS    &kp PG_DN        &kp PG_UP      &kp DEL          &kp PSCRN
-&hm LGUI F4  &hm LALT F5  &hm LCTRL F6  &hm LSHFT F10  &kp F11     &kp LEFT   &hm RSHFT DOWN   &hm RCTRL UP   &hm LALT RIGHT   &hm LGUI SLCK
-&kp F7       &kp F8       &kp F9        &none          &tog ASE_L  &mo BLE_L  &kp HOME         &kp END        &kp SYSREQ       &kp PAUSE_BREAK
-                                        &none          &trans      &trans     &none
+&kp F1       &kp F2       &kp F3        &kp F12        &none             &kp INS    &kp PG_DN        &kp PG_UP      &kp DEL          &kp PSCRN
+&hm LGUI F4  &hm LALT F5  &hm LCTRL F6  &hm LSHFT F10  &kp F11           &kp LEFT   &hm RSHFT DOWN   &hm RCTRL UP   &hm LALT RIGHT   &hm LGUI SLCK
+&kp F7       &kp F8       &kp F9        &none          &tog LEFT_ONLY_L  &mo BLE_L  &kp HOME         &kp END        &kp SYSREQ       &kp PAUSE_BREAK
+                                        &none          &trans            &trans     &none
 
             >;
         };
@@ -105,21 +103,21 @@
 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none         &none   &none  &none  &none  &none  &none
 &bt BT_SEL 4  &none         &none         &bt BT_CLR    &none   &none  &none  &none  &none  &none
 &none         &none         &none         &bt BT_SEL 0  &trans  &none  &none  &none  &none  &none
-                            &none         &trans        &trans  &none
+                                          &none         &trans  &trans &none
             >;
         };
 
-        ase_layer_1 {
+        left_only {
             bindings = <
 
-&kp LCTRL   &kp W  &kp E  &kp R      &kp T       &none       &none  &none  &none  &none
-&kp LSHIFT  &kp S  &kp D  &kp F      &kp G       &none       &none  &none  &none  &none
-&kp LALT    &kp X  &kp C  &kp V      &kp B       &none       &none  &none  &none  &none
-                          &kp SPACE  &sl ASE2_L  &tog ASE_L  &none
+&kp LCTRL   &kp W  &kp E  &kp R      &kp T              &none             &none  &none  &none  &none
+&kp LSHIFT  &kp S  &kp D  &kp F      &kp G              &none             &none  &none  &none  &none
+&kp LALT    &kp X  &kp C  &kp V      &kp B              &none             &none  &none  &none  &none
+                          &kp SPACE  &sl LEFT_ONLY_2_L  &tog LEFT_ONLY_L  &none
             >;
         };
 
-        ase_layer_2 {
+        left_only_2 {
             bindings = <
 
 &kp LCTRL   &kp Q  &kp Y  &kp U      &kp I    &none  &none  &none  &none  &none
