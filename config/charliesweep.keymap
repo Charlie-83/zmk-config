@@ -16,6 +16,7 @@
 #define BLE_L 4
 #define LEFT_ONLY_L 5
 #define LEFT_ONLY_2_L 6
+#define GAMING_L 7
 
 &lt { quick_tap_ms = <200>; };
 
@@ -91,7 +92,7 @@
 
 &kp F1       &kp F2       &kp F3        &kp F12        &none             &kp INS    &kp PG_DN        &kp PG_UP      &kp DEL          &kp PSCRN
 &hm LGUI F4  &hm LALT F5  &hm LCTRL F6  &hm LSHFT F10  &kp F11           &kp LEFT   &hm RSHFT DOWN   &hm RCTRL UP   &hm LALT RIGHT   &hm LGUI SLCK
-&kp F7       &kp F8       &kp F9        &none          &tog LEFT_ONLY_L  &mo BLE_L  &kp HOME         &kp END        &kp SYSREQ       &kp PAUSE_BREAK
+&kp F7       &kp F8       &kp F9        &tog GAMING_L  &tog LEFT_ONLY_L  &mo BLE_L  &kp HOME         &kp END        &kp SYSREQ       &kp PAUSE_BREAK
                                         &none          &trans            &trans     &none
 
             >;
@@ -124,6 +125,16 @@
 &kp LSHIFT  &kp A  &kp H  &kp J      &kp K    &none  &none  &none  &none  &none
 &kp LALT    &kp Z  &kp N  &kp M      &kp DEL  &none  &none  &none  &none  &none
                           &kp SPACE  &kp TAB  &none  &none
+            >;
+        };
+
+        gaming {
+            bindings = <
+&kp LCTRL   &kp Q  &kp W  &kp E      &kp R          &kp Y          &kp U  &kp I      &kp O    &kp P
+&kp LSHIFT  &kp A  &kp S  &kp D      &kp F          &kp H          &kp J  &kp K      &kp L    &kp COLON
+&kp LALT    &kp Z  &kp X  &kp C      &kp V          &kp N          &kp M  &kp COMMA  &kp DOT  &kp ESC
+                          &kp SPACE  &lt NUM_L TAB  &tog GAMING_L  &kp BSPC
+
             >;
         };
     };
